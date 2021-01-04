@@ -6,7 +6,11 @@ module.exports = {
     config.plugins.push(
       new ModuleFederationPlugin({
         name: "productList",
-        filename: "remoteEntry.js",
+        library: {
+          type: config.output.libraryTarget,
+          name: "productList",
+        },
+        filename: "static/runtime/remoteEntry.js",
         exposes: {
           "./ProductListIndex": "./pages/index",
         },
