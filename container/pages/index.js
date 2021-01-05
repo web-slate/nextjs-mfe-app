@@ -1,7 +1,7 @@
-import('./bootstrap')
-
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Header from './components/header'
+import Footer from './components/footer'
 
 export default function Home() {
   return (
@@ -11,9 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <footer className={styles.footer}>
-        <h1>Container Header</h1>
-      </footer>
+      <Header />
 
       <main className={styles.main}>
         <h3 className={styles.title}>
@@ -21,9 +19,7 @@ export default function Home() {
         </h3>
       </main>
 
-      <footer className={styles.footer}>
-        Container Footer
-      </footer>
+      <Footer />
     </div>
   )
 }
