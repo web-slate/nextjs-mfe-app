@@ -1,5 +1,12 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import styles from '../styles/plp.module.css'
+
+const CommonHeader = dynamic(() => import('./bootstrap'));
+
+// const CommonHeader = dynamic(() =>
+//   import('./bootstrap').then((mod) => mod.Hello)
+// )
 
 export default function ProductListing() {
   return (
@@ -9,9 +16,7 @@ export default function ProductListing() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <footer className={styles.footer}>
-        <h1>Container Header</h1>
-      </footer>
+      <CommonHeader />
 
       <main className={styles.main}>
         <h3 className={styles.title}>

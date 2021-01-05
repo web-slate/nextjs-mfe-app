@@ -1,1 +1,1 @@
-import '@plp/ProductListIndex';
+import '@container/ProductListIndex';
